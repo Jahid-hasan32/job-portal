@@ -22,8 +22,10 @@ export const Home = () => {
 
   const [jobs, setjobs] = useState([]);
   const [isLoading, setIsLoading] = useState(true)
+  
   useEffect(() => {
     setIsLoading(true)
+    // fetch("http://127.0.0.1:8000/")
     fetch("jobs.json")
       .then(res => res.json())
       .then(data => {
@@ -100,7 +102,7 @@ export const Home = () => {
         <Banner query={query} queryReceiver={queryReceiver} />
       </div>
 
-      <section className='container bg-[#FAFAFA] max-w-7xl px-4 py-10 gap-8 grid grid-cols-4'>
+      <section className='container bg-third_color max-w-7xl px-4 py-10 gap-8 grid grid-cols-4'>
         {/* left side */}
         <div className='bg-white p-4 rounded'>
           <h1 className='font-bold mb-3'>Filters</h1>

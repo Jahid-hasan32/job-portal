@@ -5,6 +5,7 @@ import { IoMdStopwatch } from "react-icons/io";
 import { MdLocationOn } from "react-icons/md";
 
 const Card = ({ data }) => {
+  // const baseURL = 'http://127.0.0.1:8000/'
   return (
     <section>
       <div>
@@ -12,10 +13,11 @@ const Card = ({ data }) => {
         <div className='card'>
           <Link className="flex gap-x-3">
             <div>
+              {/* <img src={`${baseURL}${data.companyLogo}`} alt="" className='w-36' /> */}
               <img src={data.companyLogo} alt="" className='w-36' />
             </div>
             <div className=''>
-              <span className='text-primary/75 card-title'>{data.companyName}</span>
+              <span className='text-primary/75 card-title'>{data.companyName.companyName}</span>
               <h1 className=''>{data.jobTitle}</h1>
               <div className="icon flex gap-x-2 my-1">
                 <span className='flex items-center'><MdLocationOn className='text-primary/75' /> {data.jobLocation}</span>

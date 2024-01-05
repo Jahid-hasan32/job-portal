@@ -15,12 +15,12 @@ const Navbar = () => {
     { path: "/", title: "Start a search" },
     { path: "/my-jobs", title: "My jobs" },
     { path: "/salary-estimate", title: "salary estimate" },
-    { path: "/post-job", title: "Post a job" },
+    { path: "/post-a-job", title: "Post a job" },
   ]
 
   return (
     <div>
-      <header className='py-6 '>
+      <header className='py-6 border '>
         <nav className='container px-2 xl:px-0 max-w-7xl flex justify-between'>
 
           {/* logo */}
@@ -48,10 +48,10 @@ const Navbar = () => {
 
           {/* sign up & sign in btns */}
 
-          <div className='space-x-3 hidden lg:block'>
-            <Link to={'/sign-up'} className='font-bold tracking-wide border-2 border-primary py-2 px-4 rounded text-primary hover:bg-secondery hover:text-white duration-150 ease-out'>Sign up</Link>
-            <Link to={'/sign-up'} className='font-bold tracking-wide border-2 border-primary py-2 px-4 rounded text-white bg-secondery hover:bg-white hover:text-primary duration-150 ease-out'>Sign in</Link>
-          </div>
+          <div className='space-x-3 md:block'>
+              <Link to={'/users-autentication/login'} className='font-bold tracking-wide border-2 border-primary py-2 px-4 rounded text-white bg-secondery hover:bg-white hover:text-primary duration-150 ease-out'>Sign in</Link>
+              <Link to={'/users-autentication/register'} className='font-bold tracking-wide border-2 border-primary py-2 px-4 rounded text-primary bg-white hover:bg-secondery hover:text-white duration-150 ease-out'>Sign up</Link>
+            </div>
 
           {/* toogle btn for small devices */}
 
@@ -83,8 +83,8 @@ const Navbar = () => {
             {/* sign up & sign in btns */}
 
             <div className='space-x-3 pt-5 md:block'>
-              <Link to={'/sign-up'} className='font-bold tracking-wide border-2 border-primary py-2 px-4 rounded text-primary bg-white hover:bg-secondery hover:text-white duration-150 ease-out'>Sign up</Link>
-              <Link to={'/sign-up'} className='font-bold tracking-wide border-2 border-primary py-2 px-4 rounded text-white bg-secondery hover:bg-white hover:text-primary duration-150 ease-out'>Sign in</Link>
+              <Link to={'/users-autentication-login'} className='font-bold tracking-wide border-2 border-primary py-2 px-4 rounded text-white bg-secondery hover:bg-white hover:text-primary duration-150 ease-out'>Sign in</Link>
+              <Link to={'/users-autentication/register'} className='font-bold tracking-wide border-2 border-primary py-2 px-4 rounded text-primary bg-white hover:bg-secondery hover:text-white duration-150 ease-out'>Sign up</Link>
             </div>
           </ul>
         </div>
